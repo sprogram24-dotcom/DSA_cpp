@@ -65,6 +65,7 @@ int main(){
     cout<<ptr4<<endl;
     cout<<ptr4-ptr3<<endl;
 
+    //relational opretor
     if (ptr3==ptr4-1){
         cout<<"True"<<endl;
     }
