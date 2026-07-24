@@ -27,7 +27,6 @@ int rotateSearch(int arr[],int s,int target){
                 }
             }
         }
-        
     }else{
         int x=binSearch(arr,target,start,mid-1);
         if(target==arr[x]){
@@ -42,10 +41,34 @@ int rotateSearch(int arr[],int s,int target){
     }     
 }
 
+int rtsrch(int arr[],int s,int target){
+    int start=0;
+    int end=s-1;
+    while(start<=end){
+        int mid=start+(end-start)/2;
+        if (target==arr[mid]){
+            return mid;
+        }
+        if(arr[start]<=arr[mid]){
+            if(target>=arr[start] && target<=arr[mid]){
+                end=mid-1;
+            }else{
+                start=mid+1;
+            }
+        }else{
+            if(target>=arr[mid] && target<=arr[end]){
+                start=mid+1;
+            }else{
+                end=mid-1;
+            }
+        }
+    }
+}
+
 
 int main(){
     int arr[]={3,4,5,6,7,0,1,2};
     int arr1[]={6,7,0,1,2,3,4,5};
-    cout<<rotateSearch(arr1,8,0);
+    cout<<rtsrch(arr1,8,0);
     return 0;
 }
