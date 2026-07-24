@@ -32,10 +32,10 @@ int bookAlloc(int arr[],int n, int m){
     int ans;
     while(start<=end){
         int mid=start+(end-start)/2;
-        if(isvalid(arr,n,m,mid)){
+        if(isvalid(arr,n,m,mid)){ //valid--> left
             ans=mid;
             end=mid-1;
-        }else{
+        }else{ //invalid --> right
             start=mid+1;
         }
     }
