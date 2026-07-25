@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// ascending order
 void insertionSort(int arr[],int n){
     for(int i=1;i<n;i++){
         int curr=arr[i];
