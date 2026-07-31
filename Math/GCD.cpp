@@ -28,6 +28,6 @@ int impGCD(int a,int b){
 int main(){
     int a=12;
     int b=18;
-    cout<<impGCD(a,b);
+    cout<<GCD(a,b);
     return 0;
 }
