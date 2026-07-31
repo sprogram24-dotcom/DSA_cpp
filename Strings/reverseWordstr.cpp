@@ -13,8 +13,9 @@ string reverseWordpos(string s){
             i++;
         }
         reverse(word.begin(),word.end());
+        if(word.length()>0){
             ans+=" "+word;
-        
+        }
     }
     return ans.substr(1);
 }
@@ -41,6 +42,6 @@ string revwordpos(string s){
 
 int main(){
     string s=" hello   world ";
-    cout<<reverseWordpos(s);
+    cout<<revwordpos(s);
     return 0;
 }
