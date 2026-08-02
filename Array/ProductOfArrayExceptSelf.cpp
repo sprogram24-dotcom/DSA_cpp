@@ -24,6 +24,8 @@ void pro(int arr[],int n){
     }
 }
 
+// 
+
 int main(){
     int arr[]={1,2,3,4};
     // pro(arr,4);
